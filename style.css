@@ -1,0 +1,229 @@
+/* Global Background - Mid-tone CHMSU Greens (Not too dark, not too bright) */
+body {
+    background: linear-gradient(135deg, #144023, #1e6035, #278046);
+    background-attachment: fixed;
+    color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* Custom Header and Footer Glassmorphism (Softer Green Tint) */
+.glass-header {
+    background: rgba(20, 64, 35, 0.65) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.glass-footer {
+    background: rgba(20, 64, 35, 0.65) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+}
+
+/* Pro-Level Gradient Text Effect - Softened Gold */
+.gradient-text {
+    background: linear-gradient(45deg, #f4d03f 0%, #d4ac0d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* The Glass Card Container */
+.card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Card Header Tweaks */
+.card-header {
+    background: rgba(0, 0, 0, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px 15px 0 0 !important;
+    color: #f4d03f !important; /* Soft Gold text */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Inputs and Selects */
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+/* Form Focus Glow Effect - Soft Gold Glow */
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #d6bd57 !important;
+    box-shadow: 0 0 8px rgba(244, 208, 63, 0.4) !important;
+    outline: none;
+}
+
+/* Fix for Select Dropdown Options */
+option {
+    background: #196132; /* Matches the mid-tone green background */
+    color: #ffffff;
+}
+
+/* Text and Labels */
+.form-label, .form-check-label {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.text-muted {
+    color: #c4d4c9 !important; /* Lighter muted text so it doesn't get lost */
+}
+
+/* Primary Button Styling - Softened Flame Orange */
+.btn-primary {
+    background: linear-gradient(45deg, #e67e22 0%, #cf4c10 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4) !important;
+}
+
+/* Secondary Button Styling (Go Back) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #fff !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Dynamic Checkbox Container */
+#checkboxContainer {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px;
+}
+
+/* Custom Output Table Styling for process.php */
+.table .table {
+    --bs-table-bg: transparent !important;
+    --bs-table-striped-bg: transparent !important;
+    color: #e0e0e0 !important;
+    margin-bottom: 0;
+}
+
+/* Dark Header with Gold Text */
+.table-dark th {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-color: rgba(244, 208, 63, 0.2) !important;
+    color: #f4d03f !important; /* Soft Gold text */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* THE ALTERNATING COLORS LOGIC (Targeting td to override Bootstrap) */
+
+/* Odd rows: Darker transparent background */
+.table-striped > tbody > tr:nth-of-type(odd) > td {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Even rows: Lighter transparent background */
+.table-striped > tbody > tr:nth-of-type(even) > td {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Make the results column text pop slightly more */
+.table-striped > tbody > tr > td:nth-child(2) {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.table-dark th {
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #f4d03f !important; /* Soft Gold text */
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: transparent !important;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Form Striped Rows */
+.striped-row {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+/* Alternating background colors for the input rows */
+.striped-row:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+.striped-row:nth-child(even) {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Make labels pop out on the left side - Soft Gold */
+.striped-row label {
+    color: #f4d03f !important;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* THE ALTERNATING COLORS LOGIC */
+/* Odd rows get a slightly white, semi-transparent background */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Even rows stay transparent to show the deep green body background */
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: transparent !important;
+}
+
+/* Align label text to the right on desktop */
+@media (min-width: 576px) {
+    .text-sm-end {
+        text-align: right !important;
+    }
+}
